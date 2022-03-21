@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { StyleSheet, Dimensions, Image, ScrollView } from 'react-native';
-import { Card, SearchBar,} from 'react-native-elements'
+import { Card, SearchBar, AirbnbRating} from 'react-native-elements'
 
 // import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -28,6 +28,8 @@ export default function Properties() {
 				value={value}
 			/>
 			<ScrollView>
+			{/* For Demo Purposes only 
+			Cards need to be generated programatically and extracted as separate component */}
 				<Card containerStyle={styles.card} wrapperStyle={{}}>
 					<View
 						style={{
@@ -41,9 +43,19 @@ export default function Properties() {
 							resizeMode="contain"
 							source={require('../assets/images/Lido-Beach-Villa-15.jpg')}
 						/>
-						{/* <Text>Pranshu Chittora</Text> */}
 					</View>
 					<Card.Divider />
+					<View style={styles.ratings}>
+						<AirbnbRating
+							count={5}
+							defaultRating={3}
+							reviews={[]}
+							onFinishRating={() =>
+								console.log("onFinishRating()")
+							}
+							showRating
+						/>
+					</View>	
 					<Card.Title>Lido Beach Villa</Card.Title>
 				</Card>
 				<Card containerStyle={styles.card} wrapperStyle={{}}>
@@ -83,9 +95,7 @@ export default function Properties() {
 					<Card.Title>Lido Beach Villa</Card.Title>
 				</Card>
 			</ScrollView>
-      {/* <Text style={styles.title}>Properties/Home</Text> */}
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      {/* <EditScreenInfo path="/screens/Properties.tsx" /> */}
     </View>
   );
 }
@@ -118,5 +128,9 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
-  },
+	},
+	ratings: {
+		backgroundColor: 'transparent',
+		
+	}
 });
