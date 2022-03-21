@@ -11,7 +11,7 @@ import { JsonRpcProvider } from 'ethers/providers';
 const url = 'https://rpc.gnosischain.com/'; 
 const provider = new JsonRpcProvider(url);
 
-export default function Landing({ navigation }: RootTabScreenProps<'Landing'>) {
+export default function Welcome({ navigation }: RootTabScreenProps<'Welcome'>) {
   const [networkAddress, setNetworkAddress] = useState('');
   const [wallet, setWallet] = useState('');
   const [networkClient, setNetworkClient] = useState('');
