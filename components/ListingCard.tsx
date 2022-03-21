@@ -5,31 +5,33 @@ import { Text, View } from '../components/Themed';
 
 export const ListingCard = () => {
 	return (
-		<Card containerStyle={styles.card} wrapperStyle={{}}>
-			<View
-				style={{
-					position: "relative",
-					alignItems: "center",
-					alignSelf: "stretch"
-				}}
-			>
-				<Image
-				style={{ width: 300, height: 250}}
-				resizeMode="contain"
-				source={require('../assets/images/Lido-Beach-Villa-15.jpg')}
-			/>
-			</View>
-			<Card.Divider />
-			<AirbnbRating
-				count={5}
-				defaultRating={3}
-				onFinishRating={() =>
-					console.log("onFinishRating()")
-				}
-				showRating
-			/>
-			<Card.Title>Lido Beach Villa</Card.Title>
-		</Card>
+		<View>
+			<Card containerStyle={styles.card} wrapperStyle={{}}>
+				<View
+					style={{
+						position: "relative",
+						alignItems: "center",
+						alignSelf: "stretch"
+					}}
+				>
+					<Image
+						style={{ width: 300, height: 250}}
+						resizeMode="contain"
+						source={require('../assets/images/Lido-Beach-Villa-15.jpg')}
+					/>
+				</View>
+				<Card.Divider />
+				<AirbnbRating
+					count={5}
+					defaultRating={3}
+					onFinishRating={() =>
+						console.log("onFinishRating()")
+					}
+					showRating
+				/>
+				<Card.Title>Lido Beach Villa</Card.Title>
+			</Card>
+		</View>
 	)
 }
 

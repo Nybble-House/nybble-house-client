@@ -48,15 +48,14 @@ export default function Properties() {
 					<View style={styles.ratings}>
 						<AirbnbRating
 							count={5}
-							defaultRating={3}
+							defaultRating={4.5}
 							reviews={[]}
 							onFinishRating={() =>
 								console.log("onFinishRating()")
 							}
-							showRating
 						/>
 					</View>	
-					<Card.Title>Lido Beach Villa</Card.Title>
+					{/* <Card.Title>Lido Beach Villa</Card.Title> */}
 				</Card>
 				<Card containerStyle={styles.card} wrapperStyle={{}}>
 					<View
