@@ -13,11 +13,12 @@ export const FundingPot = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
     alignItems: 'baseline',
     justifyContent: 'space-evenly',
-    margin: 20,
+    margin: 10,
+    
   },
   title: {
     fontSize: 20,

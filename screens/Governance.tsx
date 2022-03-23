@@ -4,6 +4,7 @@ import { Text, View } from '../components/Themed';
 
 import { ListTeams } from '../components/ListTeams'
 import { FundingPot } from '../components/FundingPot'
+import { EventFeed } from '../components/EventFeed'
 
 export default function Governance() {
   return (
@@ -11,7 +12,7 @@ export default function Governance() {
       <ListTeams />
       <View style={styles.sectionRight}>
         <FundingPot />
-        {/* <EventFeed /> */}
+        <EventFeed />
         {/* <ActionMenu /> */}
       </View>
       {/* <Text style={styles.title}>Governance</Text> */}
@@ -31,7 +32,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   sectionRight: {
-    width: '80%'
+    width: '80%',
+    alignContent: 'flex-start',
+    justifyContent: "flex-start",
   },
   title: {
     fontSize: 20,

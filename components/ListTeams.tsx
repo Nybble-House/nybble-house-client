@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: '#403d39',
+    // backgroundColor: '#403d39',
     borderRadius: 10
   },
   title: {
