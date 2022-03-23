@@ -1,13 +1,32 @@
 import { StyleSheet } from 'react-native';
-
-// import EditScreenInfo from '../components/EditScreenInfo';
+import { Header } from 'react-native-elements'
 import { Text, View } from '../components/Themed';
+
+import { ListTeams } from '../components/ListTeams'
 
 export default function Governance() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Governance</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View>
+        <ListTeams />
+        {/* <Header
+          backgroundColor="transparent"
+          backgroundImageStyle={{}}
+          barStyle="default"
+        centerComponent={ {text: 'MY TITLE', style: { color: '#fff' }} }
+          centerContainerStyle={{flexDirection: 'row'}}
+          containerStyle={{ width: 50 }}
+          leftComponent={{ icon: "menu", color: "#fff" }}
+          leftContainerStyle={{}}
+          // linearGradientProps={{}}
+          placement="left"
+          rightComponent={{}}
+          rightContainerStyle={{}}
+          statusBarProps={{}}
+        /> */}
+      </View>
+      {/* <Text style={styles.title}>Governance</Text> */}
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <EditScreenInfo path="/screens/Governance.tsx" /> */}
     </View>
   );
@@ -16,8 +35,11 @@ export default function Governance() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    // flexWrap: 'wrap',
+    alignItems: 'stretch',
+    alignContent: 'flex-start',
+    justifyContent: 'space-between',
   },
   title: {
     fontSize: 20,
