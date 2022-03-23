@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { StyleSheet, Dimensions, Image, ScrollView } from 'react-native';
 import { Card, SearchBar, AirbnbRating} from 'react-native-elements'
-
-// import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function Properties() {
@@ -45,6 +43,10 @@ export default function Properties() {
 						/>
 					</View>
 					<Card.Divider />
+					<View >
+						<Text>Beautiful Villa House</Text>
+						<Text>Casa Hermosa</Text>
+					</View>
 					<View style={styles.ratings}>
 						<AirbnbRating
 							count={5}

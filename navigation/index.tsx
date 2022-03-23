@@ -60,7 +60,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Properties"
+      initialRouteName="Governance"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
