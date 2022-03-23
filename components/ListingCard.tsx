@@ -1,5 +1,5 @@
 import { useState,  } from 'react'
-import { Stylesheet, Image } from 'react-native '
+import { StyleSheet, Image } from 'react-native'
 import { Card, AirbnbRating } from 'react-native-elements'
 import { Text, View } from '../components/Themed';
 
